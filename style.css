@@ -1,4 +1,4 @@
-/* General Styles */
+
 * {
     margin: 0;
     padding: 0;
@@ -18,9 +18,9 @@ body {
     margin: 0 auto;
 }
 
-/* Header Styles */
+
 .header {
-    background-color: #4a90e2; /* Blue background */
+    background-color: #4a90e2; 
     color: white;
     padding: 20px;
     border-radius: 10px;
@@ -37,26 +37,24 @@ body {
     margin-top: 10px;
 }
 
-/* Text Animation */
 @keyframes textAnimate {
     0% {
         transform: scale(1);
         color: #fff;
-        text-shadow: 0 0 10px #e0f7fa, 0 0 20px #e0f7fa; /* Very light blue */
+        text-shadow: 0 0 10px #e0f7fa, 0 0 20px #e0f7fa; 
     }
     50% {
         transform: scale(1.1);
-        color: #e0f7fa; /* Light blue */
-        text-shadow: 0 0 15px #e0f7fa, 0 0 30px #ffffff; /* Light blue and white */
+        color: #e0f7fa; 
+        text-shadow: 0 0 15px #e0f7fa, 0 0 30px #ffffff;
     }
     100% {
         transform: scale(1);
         color: #fff;
-        text-shadow: 0 0 10px #e0f7fa, 0 0 20px #e0f7fa; /* Very light blue */
+        text-shadow: 0 0 10px #e0f7fa, 0 0 20px #e0f7fa; 
     }
 }
 
-/* Recipe Section */
 .recipe {
     background-color: #ffffff;
     padding: 20px;
@@ -67,7 +65,7 @@ body {
 
 .recipe h2 {
     font-size: 2em;
-    color: #4a90e2; /* Blue color */
+    color: #4a90e2; 
     margin-bottom: 20px;
     transition: all 0.3s ease;
 }
@@ -82,19 +80,18 @@ body {
     margin-bottom: 10px;
 }
 
-/* Hover Effects for Recipe Box */
-.recipe:hover {
-    box-shadow: 0 0 20px #4a90e2; /* Blue glow on hover */
-    transform: scale(1.05); /* Slightly enlarge the recipe box */
-}
 
+.recipe:hover {
+    box-shadow: 0 0 20px #4a90e2; 
+    transform: scale(1.05);
+}
 .recipe:hover h2 {
-    color: #4a90e2; /* Change title text color to blue */
-    font-size: 2.2em; /* Enlarge title text */
+    color: #4a90e2; 
+    font-size: 2.2em; 
 }
 
 .recipe:hover .ingredients li, .recipe:hover .instructions li {
-    font-size: 1.4em; /* Slightly enlarge ingredient and instruction text */
+    font-size: 1.4em;
 }
 
 /* Footer Styles */
@@ -104,7 +101,7 @@ body {
     color: #555;
 }
 
-/* Cute Seasonal Elements */
+
 body {
     background-image: url('https://www.pngkey.com/png/full/14-146857_christmas-png-clipart-snowflakes-png.png');
     background-size: cover;
@@ -113,23 +110,23 @@ body {
 
 .header {
     background-image: url('https://www.transparenttextures.com/patterns/45-degree-fabric-light.png');
-    background-color: #4a90e2; /* Blue background */
+    background-color: #4a90e2; 
 }
 
 .recipe {
     background-image: url('https://www.transparenttextures.com/patterns/linen.png');
     background-color: #fff;
-    border: 2px solid #4a90e2; /* Blue border */
+    border: 2px solid #4a90e2; 
 }
 
-/* Adding some warmth to the page with a festive touch */
+
 footer {
     font-style: italic;
 }
 
 h2 {
     font-family: 'Arial', sans-serif;
-    color: #4a90e2; /* Blue color */
+    color: #4a90e2; 
 }
 
 ul, ol {
