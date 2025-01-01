@@ -1,196 +1,141 @@
-/******************************************************************************
-START Glitch hello-app default styles
-
-The styles in this section do some minimal CSS resets, set default fonts and 
-colors, and handle the layout for our footer and "Remix on Glitch" button. If
-you're new to CSS they may seem a little complicated, but you can scroll down
-to this section's matching END comment to see page-specific styles.
-******************************************************************************/
-
-
-/* 
-  The style rules specify elements by type and by attributes such as class and ID
-  Each section indicates an element or elements, then lists the style properties to apply
-  See if you can cross-reference the rules in this file with the elements in index.html
-*/
-
-/* Our default values set as CSS variables */
-:root {
-  --color-bg: #69F7BE;
-  --color-text-main: #000000;
-  --color-text-header: #2800FF;
-  --color-primary: #FFFF00;
-  --wrapper-height: 87vh;
-  --image-max-width: 300px;
-  --image-margin: 3rem;
-  --font-family: "HK Grotesk";
-  --font-family-header: "HK Grotesk";
-}
-
-/* Basic page style resets */
+/* General Styles */
 * {
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-[hidden] {
-  display: none !important;
-}
-
-/* Import fonts */
-@font-face {
-  font-family: HK Grotesk;
-  src: url("https://cdn.glitch.me/605e2a51-d45f-4d87-a285-9410ad350515%2FHKGrotesk-Regular.otf?v=1603136326027")
-    format("opentype");
-}
-@font-face {
-  font-family: HK Grotesk;
-  font-weight: bold;
-  src: url("https://cdn.glitch.me/605e2a51-d45f-4d87-a285-9410ad350515%2FHKGrotesk-Bold.otf?v=1603136323437")
-    format("opentype");
-}
-
-/* Our remix on glitch button */
-.btn--remix {
-  font-family: HK Grotesk;
-  padding: 0.75rem 1rem;
-  font-size: 1.1rem;
-  line-height: 1rem;
-  font-weight: 500;
-  height: 2.75rem;
-  align-items: center;
-  cursor: pointer;
-  background: #FFFFFF;
-  border: 1px solid #000000;
-  box-sizing: border-box;
-  border-radius: 4px;
-  text-decoration: none;
-  color: #000;
-  white-space: nowrap;
-  margin-left: auto;
-}
-.btn--remix img {
-  margin-right: 0.5rem;
-}
-.btn--remix:hover {
-  background-color: #D0FFF1;
-}
-
-/* Navigation grid */
-.footer {
-  display: flex;
-  justify-content: space-between;
-  margin: 1rem auto 0;
-  padding: 1rem 0 0.75rem 0;
-  width: 100%;
-  flex-wrap: wrap;
-  border-top: 4px solid #fff;
-}
-
-.footer a:not(.btn--remix):link,
-a:not(.btn--remix):visited {
-  font-family: HK Grotesk;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 1.1rem;
-  color: #000;
-  text-decoration: none;
-  border-style: none;
-}
-.footer a:hover {
-  background: var(--color-primary);
-}
-
-.footer .links {
-  padding: 0.5rem 1rem 1.5rem;
-  white-space: nowrap;
-}
-
-.divider {
-  padding: 0 1rem;
-}
-/******************************************************************************
-END Glitch hello-app default styles
-******************************************************************************/
 
 body {
-  font-family: HK Grotesk;
-  background-color: var(--color-bg);
+    font-family: 'Arial', sans-serif;
+    background-color: #f7f9fb;
+    color: #333;
+    padding: 20px;
+    text-align: center;
 }
 
-/* Page structure */
-.wrapper {
-  min-height: var(--wrapper-height);
-  display: grid;
-  place-items: center;
-  margin: 0 1rem;
-}
-.content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+.container {
+    max-width: 800px;
+    margin: 0 auto;
 }
 
-/* Very light scaling for our illustration */
-.title {
-  color: var(--color-text-header);
-  font-family: HK Grotesk;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 100px;
-  line-height: 105%;
-  margin: 0;
+/* Header Styles */
+.header {
+    background-color: #4a90e2; /* Blue background */
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
 }
 
-/* Very light scaling for our illustration */
-.illustration {
-  max-width: 100%;
-  max-height: var(--image-max-width);
-  margin-top: var(--image-margin);
+.header h1 {
+    font-size: 2.5em;
+    animation: textAnimate 2s ease-in-out infinite alternate;
 }
 
-/* Instructions */
-.instructions {
-  margin: 1rem auto 0;
+.header p {
+    font-size: 1.2em;
+    margin-top: 10px;
 }
 
-/* Button - Add it from the README instructions */
-button,
-input {
-  font-family: inherit;
-  font-size: 100%;
-  background: #FFFFFF;
-  border: 1px solid #000000;
-  box-sizing: border-box;
-  border-radius: 4px;
-  padding: 0.5rem 1rem;
-  transition: 500ms;
+/* Text Animation */
+@keyframes textAnimate {
+    0% {
+        transform: scale(1);
+        color: #fff;
+        text-shadow: 0 0 10px #e0f7fa, 0 0 20px #e0f7fa; /* Very light blue */
+    }
+    50% {
+        transform: scale(1.1);
+        color: #e0f7fa; /* Light blue */
+        text-shadow: 0 0 15px #e0f7fa, 0 0 30px #ffffff; /* Light blue and white */
+    }
+    100% {
+        transform: scale(1);
+        color: #fff;
+        text-shadow: 0 0 10px #e0f7fa, 0 0 20px #e0f7fa; /* Very light blue */
+    }
 }
 
-/* Subheading */
+/* Recipe Section */
+.recipe {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.recipe h2 {
+    font-size: 2em;
+    color: #4a90e2; /* Blue color */
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+.ingredients ul, .instructions ol {
+    text-align: left;
+    margin-left: 30px;
+}
+
+.ingredients li, .instructions li {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+/* Hover Effects for Recipe Box */
+.recipe:hover {
+    box-shadow: 0 0 20px #4a90e2; /* Blue glow on hover */
+    transform: scale(1.05); /* Slightly enlarge the recipe box */
+}
+
+.recipe:hover h2 {
+    color: #4a90e2; /* Change title text color to blue */
+    font-size: 2.2em; /* Enlarge title text */
+}
+
+.recipe:hover .ingredients li, .recipe:hover .instructions li {
+    font-size: 1.4em; /* Slightly enlarge ingredient and instruction text */
+}
+
+/* Footer Styles */
+.footer {
+    margin-top: 30px;
+    font-size: 1.2em;
+    color: #555;
+}
+
+/* Cute Seasonal Elements */
+body {
+    background-image: url('https://www.pngkey.com/png/full/14-146857_christmas-png-clipart-snowflakes-png.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.header {
+    background-image: url('https://www.transparenttextures.com/patterns/45-degree-fabric-light.png');
+    background-color: #4a90e2; /* Blue background */
+}
+
+.recipe {
+    background-image: url('https://www.transparenttextures.com/patterns/linen.png');
+    background-color: #fff;
+    border: 2px solid #4a90e2; /* Blue border */
+}
+
+/* Adding some warmth to the page with a festive touch */
+footer {
+    font-style: italic;
+}
+
 h2 {
-  color: var(--color-text-header);
+    font-family: 'Arial', sans-serif;
+    color: #4a90e2; /* Blue color */
 }
 
-/* Interactive image */
-.illustration:active {
-  transform: translateY(5px);
+ul, ol {
+    list-style-position: inside;
 }
 
-/* Button dip
-- Toggling this class on and off will move it down and up again
-- The button transition property above determines the speed of the translate (500ms)
-*/
-.dipped {
-  transform: translateY(5px);
-}
-
-/* Links that open files in the editor */
-.fileopener {
-  cursor:pointer;
-  font-weight:bold;
-  border-bottom:3px solid var(--color-primary);
-  color: var(--color-secondary);
-}
-.fileopener:hover {
-  border-bottom:3px solid var(--color-secondary);
+footer p {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
 }
