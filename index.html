@@ -6,6 +6,145 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hot Chocolate Recipe</title>
     <link rel="stylesheet" href="/style.css" />
+    <style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f7f9fb;
+    color: #333;
+    padding: 20px;
+    text-align: center;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+
+.header {
+    background-color: #4a90e2; 
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+.header h1 {
+    font-size: 2.5em;
+    animation: textAnimate 2s ease-in-out infinite alternate;
+}
+
+.header p {
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+@keyframes textAnimate {
+    0% {
+        transform: scale(1);
+        color: #fff;
+        text-shadow: 0 0 10px #e0f7fa, 0 0 20px #e0f7fa; 
+    }
+    50% {
+        transform: scale(1.1);
+        color: #e0f7fa; 
+        text-shadow: 0 0 15px #e0f7fa, 0 0 30px #ffffff;
+    }
+    100% {
+        transform: scale(1);
+        color: #fff;
+        text-shadow: 0 0 10px #e0f7fa, 0 0 20px #e0f7fa; 
+    }
+}
+
+.recipe {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.recipe h2 {
+    font-size: 2em;
+    color: #4a90e2; 
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+.ingredients ul, .instructions ol {
+    text-align: left;
+    margin-left: 30px;
+}
+
+.ingredients li, .instructions li {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+
+.recipe:hover {
+    box-shadow: 0 0 20px #4a90e2; 
+    transform: scale(1.05);
+}
+.recipe:hover h2 {
+    color: #4a90e2; 
+    font-size: 2.2em; 
+}
+
+.recipe:hover .ingredients li, .recipe:hover .instructions li {
+    font-size: 1.4em;
+}
+
+/* Footer Styles */
+.footer {
+    margin-top: 30px;
+    font-size: 1.2em;
+    color: #555;
+}
+
+
+body {
+    background-image: url('https://www.pngkey.com/png/full/14-146857_christmas-png-clipart-snowflakes-png.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.header {
+    background-image: url('https://www.transparenttextures.com/patterns/45-degree-fabric-light.png');
+    background-color: #4a90e2; 
+}
+
+.recipe {
+    background-image: url('https://www.transparenttextures.com/patterns/linen.png');
+    background-color: #fff;
+    border: 2px solid #4a90e2; 
+}
+
+
+footer {
+    font-style: italic;
+}
+
+h2 {
+    font-family: 'Arial', sans-serif;
+    color: #4a90e2; 
+}
+
+ul, ol {
+    list-style-position: inside;
+}
+
+footer p {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+</style>
 </head>
 <body>
     <div class="container">
